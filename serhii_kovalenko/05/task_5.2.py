@@ -5,26 +5,23 @@
 
 
 # import previous program. Does not work with point, commented on this
-# import task_5.1
-
-# creating a variable with a file name
-file = 'results.txt'
+import task
 
 # work with file and print the contents once by reading in the entire file
 print('\nOnce by reading in the entire file:')
-with open(file, 'r') as f:
+with open(task.file, 'r') as f:
     file_info = f.read()
     print(file_info)
 
 # work with file and print by looping over the file object
 print('\nBy looping over the file object:')
-with open(file, 'r') as f:
+with open(task.file, 'r') as f:
     for i in f:
         print(i.rstrip())
 
 # work with file and print by storing the lines in a list and then working with them outside the 'with' block
 print('\nBy storing the lines in a list:')
-with open(file, 'r') as f:
+with open(task.file, 'r') as f:
     file_info = f.readlines()
 
 for i in file_info:
